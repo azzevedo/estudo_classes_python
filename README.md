@@ -1,1 +1,1 @@
-# estudo_classes_python
+Estudo de classes em python com alguns exemplos
