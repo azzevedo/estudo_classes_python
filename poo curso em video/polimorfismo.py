@@ -5,6 +5,7 @@
 
 # Classe abstrata
 class Animal:
+
 	_peso = float
 	_idade = int
 	_membros = int
@@ -31,20 +32,32 @@ class Animal:
 
 
 class Mamifero(Animal):
-	cor_pelo = str
+	__cor_pelo = str
+
+	def get_cor_pelo(self):
+		return self.__cor_pelo
+	
+	def set_cor_pelo(self, cor):
+		self.__cor_pelo = cor
 
 	def locomover(self):
 		print('Correndo')
 
 	def alimentar(sefl):
-		print('Mamador')
+		print('Mamando na teta da tua mãe')
 
 	def emitir_som(self):
 		print('Som de mamífero')
 
 
 class Reptil(Animal):
-	cor_escama = str
+	__cor_escama = str
+
+	def get_cor_escama(self):
+		return self.__cor_escama
+
+	def set_cor_escama(self, cor):
+		self.__cor_escama = cor
 
 	def locomover(self):
 		print('Rastejando')
@@ -57,7 +70,13 @@ class Reptil(Animal):
 
 
 class Peixe(Animal):
-	cor_escama = str
+	__cor_escama = str
+
+	def get_cor_escama(self):
+		return self.__cor_escama
+
+	def set_cor_escama(self, cor):
+		self.__cor_escama = cor
 
 	def soltar_bolha(self):
 		print('Soltar bolha')
@@ -73,7 +92,13 @@ class Peixe(Animal):
 
 
 class Ave(Animal):
-	cor_pena = str
+	__cor_pena = str
+
+	def get_cor_pena(self):
+		return self.__cor_pena
+
+	def set_cor_pena(self, cor):
+		self.__cor_pena = cor
 
 	def fazer_ninho(self):
 		print('Construiu um ninho')
@@ -86,7 +111,6 @@ class Ave(Animal):
 
 	def emitir_som(self):
 		print('Som de ave')
-
 
 
 class Canguru(Mamifero):
@@ -190,4 +214,32 @@ k9.locomover()
 k9.alimentar()
 k9.emitir_som()
 k9.abanar_rabo()
+
+################################
+print('Exemplos da aula pratica')
+
+mamifero = Mamifero()
+reptil = Reptil()
+peixe = Peixe()
+ave = Ave()
+canguru = Canguru()
+cachorro = Cachorro()
+cobra = Cobra()
+tartaruga = Tartaruga()
+goldfish = Goldfish()
+arara = Arara()
+
+mamifero.set_peso(35.3)
+mamifero.set_cor_pelo('Preto')
+mamifero.alimentar()
+mamifero.locomover()
+mamifero.emitir_som()
+
+ave.locomover()
+peixe.locomover()
+reptil.locomover()
+canguru.usar_bolsa()
+canguru.locomover()
+cachorro.locomover()
+cachorro.emitir_som()
 
